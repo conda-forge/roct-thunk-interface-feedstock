@@ -1,5 +1,5 @@
 {% set name = "roct-thunk-interface" %}
-{% set version = "2.7.0" %}
+{% set version = "2.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface/archive/roc-{{ version }}.tar.gz
-  sha256: 11e6dceec675d3c5d5dfb7e9b6daae29a57c7904a6d36515a4832be32e303c47
+  sha256: cb5aa35cc42923442ae776de1656872c1e56c9456cc472b8df759cfa99918502
 
 build:
   number: 0
