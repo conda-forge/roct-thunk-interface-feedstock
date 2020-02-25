@@ -1,5 +1,5 @@
 {% set name = "roct-thunk-interface" %}
-{% set version = "2.7.0" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface/archive/roc-{{ version }}.tar.gz
-  sha256: 11e6dceec675d3c5d5dfb7e9b6daae29a57c7904a6d36515a4832be32e303c47
+  sha256: b08176b5f4af39d0160990f9f1dea5d27974f9282f544140b4a41d19446fe570
 
 build:
   number: 0
-  skip: True  # [not linux]
+  skip: true  # [not linux]
 
 requirements:
   build:
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'Radeon Open Compute Thunk Interface'
+  summary: Radeon Open Compute Thunk Interface
 
 extra:
   recipe-maintainers:
