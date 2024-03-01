@@ -25,6 +25,7 @@ requirements:
     - {{ cdt('pciutils-devel') }}
     - pkg-config
   host:
+    - libdrm
   run:
 
 test:
