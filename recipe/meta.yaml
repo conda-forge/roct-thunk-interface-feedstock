@@ -24,6 +24,7 @@ requirements:
     - {{ cdt('numactl-devel') }}
     - {{ cdt('pciutils-devel') }}
     - pkg-config
+    - sysroot_linux-64 2.17  # [linux64]
   host:
     - libdrm
   run:
