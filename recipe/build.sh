@@ -16,6 +16,3 @@ make install
 # Copy include files
 mkdir -p $PREFIX/include
 cp $SRC_DIR/include/hsa* $PREFIX/include/
-
-# Remove license file in weird directory
-rm $PREFIX/libhsakmt/LICENSE.md
