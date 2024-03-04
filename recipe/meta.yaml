@@ -31,7 +31,7 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/include/hsakmt.h
+    - test -f $PREFIX/include/hsakmt/hsakmt.h
     - test -f $PREFIX/lib/libhsakmt.so
 
 about:
