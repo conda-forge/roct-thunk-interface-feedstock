@@ -1,5 +1,5 @@
 {% set name = "roct-thunk-interface" %}
-{% set version = "6.0.0" %}
+{% set version = "6.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/ROCm/ROCT-Thunk-Interface/archive/refs/tags/rocm-{{ version }}.tar.gz
-  sha256: 9f4e80bd0a714ce45326941b906a62298c62025eff186dc6c48282ce84c787c7
+  sha256: 5354bda9382f80edad834463f2c684289841770a4f7b13f0f40bd8271cc4c71d
 
 build:
   number: 0
   run_exports:
     - {{ pin_subpackage(name, max_pin="x.x") }}
-  skip: True  # [not linux]
+  skip: true  # [not linux]
 
 requirements:
   build:
