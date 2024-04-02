@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/ROCm/ROCT-Thunk-Interface/archive/refs/tags/rocm-{{ version }}.tar.gz
   sha256: 5354bda9382f80edad834463f2c684289841770a4f7b13f0f40bd8271cc4c71d
+  patches:
+    - 0001-Fix-missing-global-symbol.patch  # from upstream
 
 build:
   number: 0
