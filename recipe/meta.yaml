@@ -1,5 +1,5 @@
 {% set name = "roct-thunk-interface" %}
-{% set version = "6.0.2" %}
+{% set version = "6.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,10 @@ package:
 
 source:
   url: https://github.com/ROCm/ROCT-Thunk-Interface/archive/refs/tags/rocm-{{ version }}.tar.gz
-  sha256: 5354bda9382f80edad834463f2c684289841770a4f7b13f0f40bd8271cc4c71d
-  patches:
-    - 0001-Fix-missing-global-symbol.patch  # from upstream
+  sha256: 1085055068420821f7a7adb816692412b5fb38f89d67b9edb9995198f39e2f31
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage(name, max_pin="x.x") }}
   skip: true  # [not linux]
