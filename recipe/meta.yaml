@@ -1,5 +1,5 @@
 {% set name = "roct-thunk-interface" %}
-{% set version = "6.1.0" %}
+{% set version = "6.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ROCm/ROCT-Thunk-Interface/archive/refs/tags/rocm-{{ version }}.tar.gz
-  sha256: 1085055068420821f7a7adb816692412b5fb38f89d67b9edb9995198f39e2f31
+  sha256: c586d8a04fbd9a7bc0a15e0a6a161a07f88f654402bb11694bd8aebc343c00f0
 
 build:
   number: 0
@@ -18,13 +18,13 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - make
     - {{ cdt('numactl-devel') }}
     - {{ cdt('pciutils-devel') }}
     - pkg-config
-    - sysroot_linux-64 2.17  # [linux64]
   host:
     - libdrm
   run:
