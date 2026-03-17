@@ -10,7 +10,7 @@ source:
   sha256: 5c71655e3a1b9d1404dc8cb64b9d2fadd27e67606aaa8aec0c325768d8c483c0
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage(name, max_pin="x.x") }}
   skip: true  # [not linux]
@@ -22,11 +22,10 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make
-    - {{ cdt('numactl-devel') }}
-    - {{ cdt('pciutils-devel') }}
     - pkg-config
   host:
     - libdrm
+    - libnuma                   None
   run:
 
 test:
